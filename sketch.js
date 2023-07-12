@@ -1,3 +1,5 @@
+//photos taking photos layering photos in 24 hours
+
 let EL;
 let dad;
 let sign;
