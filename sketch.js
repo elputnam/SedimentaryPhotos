@@ -8,8 +8,6 @@ let elderly;
 let pregnant;
 let colour = 180;
 
-
-
 function preload(){
   EL = loadImage('assets/ELDad_Fotos_EL.png');
   dad = loadImage('assets/ELDad_Fotos_Dad.png');
