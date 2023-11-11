@@ -18,7 +18,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(base.width, base.height);
+  createCanvas(base.width/2, base.height/2);
   colorMode(HSB, 360, 100, 100, 100);
   frameRate(7);
 }
@@ -33,13 +33,13 @@ function draw() {
   //sign
   push();
   tint(255, random(50, 70));
-  image(sign, 0, 0, sign.width, sign.height);
+  image(sign, 0, 0, width, height);
   pop();
-  blend(sign, 0, 0, sign.width, sign.height, 0, 0, sign.width, sign.height, LIGHTEST);
+  blend(sign, 0, 0, sign.width, sign.height, 0, 0, width, height, LIGHTEST);
 
   //photo layers
-  blend(pregnant, 0, 0, pregnant.width, pregnant.height, 0, 0, pregnant.width, pregnant.height, DARKEST);
-  blend(elderly, 0, 0, elderly.width, elderly.height, 0, 0, elderly.width, elderly.height, DARKEST);
+  blend(pregnant, 0, 0, pregnant.width, pregnant.height, 0, 0, width, height, DARKEST);
+  blend(elderly, 0, 0, elderly.width, elderly.height, 0, 0, width, height, DARKEST);
 
   //blocks
   for (let i = 0; i < 10; i++){
@@ -69,3 +69,5 @@ function draw() {
     base.filter(INVERT);
   }
 }
+
+
